@@ -350,7 +350,7 @@
             </tbody>
         </table>
 
-        <div class="row">
+        <div class="row" id="btn">
             <button class="btn bg-blue col-xs-3 col-xs-offset-5">SUBMIT</button>
         </div>
     </div>
@@ -368,5 +368,12 @@
 <script src="js/bootstrap.js"></script>
 <script src="js/bootlint.js"></script>
 <script src="js/evaluation.js"></script>
+<script>
+    $(function(){
+        $(" #btn ").click(function(){
+            location.href="schoolComment.html";
+        })
+    })
+</script>
 </body>
 </html>

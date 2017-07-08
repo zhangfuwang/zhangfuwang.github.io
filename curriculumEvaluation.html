@@ -336,7 +336,7 @@
                 </tbody>
             </table>
 
-            <div class="row">
+            <div class="row" id="btn">
                 <button class="btn bg-blue col-xs-3 col-xs-offset-5">查看评论</button>
             </div>
         </div>
@@ -353,6 +353,12 @@
 <script src="js/jquery-1.11.3.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/evaluation.js"></script>
-
+<script>
+    $(function(){
+        $(" #btn ").click(function(){
+            location.href="curriculumComment.html";
+        })
+    })
+</script>
 </body>
 </html>
