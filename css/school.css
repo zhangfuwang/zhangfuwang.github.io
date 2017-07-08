@@ -1,0 +1,432 @@
+/*通锟斤拷*/
+@charset "utf-8";
+/* CSS Document */
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 12px;
+}
+ul, li, div, p, body, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+
+}
+a:link{
+    text-decoration: none;
+}
+input {
+    -webkit-appearance: none;
+    outline: none
+}
+h1, h2, h3, h4, h5,b,i,small{
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    outline: none;
+    webkit-focus-ring-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+.hide {
+    display: none;
+}
+*{
+    box-sizing: border-box;
+}
+
+/*通用类*/
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+.more{}
+.score{
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #3ad8ff;
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+    font-size: 14px;
+    color: #3ad8ff;
+}
+.vertical-center{
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.btn-default{
+    background-color: #fff;
+    color: #707070;
+    border: none;
+    -moz-box-shadow: 0 0 2px #ddd;
+    -webkit-box-shadow:  0 0 2px #ddd;
+    box-shadow:  0  0 2px #ddd;
+}
+.clear{
+    :before
+}
+.bg-blue{
+    background-color: #3ad8ff;
+    color: #fff;
+
+}
+.bg-white{
+    background-color: #ffffff;
+
+}
+.vertical-align{
+    position: relative;
+    left: 0%;
+    top: 40%;
+}
+.font-size{
+    font-size: 2em;
+    font-weight: bold;
+}
+.text-white{
+
+    color: #ffffff;
+}
+.text-blue{
+
+    color: #3ad8ff;
+}
+.text-gray{
+    color: #999;
+}
+#evaluationImg{
+    margin-top: -1%;
+}
+.margin-top-bottom{
+    margin: 1% 0;
+}
+.margin-top-1{
+    margin-top: 1% ;
+}
+.margin-top-2{
+    margin-top: 2% ;
+}
+.margin-top-3{
+    margin-top: 3% ;
+}
+.margin-top-4{
+    margin-top: 4% ;
+}
+/*头部*/
+
+/*登录图片按钮*/
+#login{
+    position: relative;
+    top: 25px;
+    left: 0;
+    transform: translateY(-50%);
+}
+.navbar-brand{
+    padding: 0;
+}
+nav.navbar-default{
+    background-color: #fff;
+}
+#schoolCollapse .text-blue{
+    color: #3ad8ff;
+}
+#search{
+    height:30px;
+    border: none;
+    border-radius: 0;
+    box-shadow:none ;
+    -webkit-box-shadow:none ;
+    -moz-box-shadow: none;
+    font-size: 1rem;
+}
+#search-icon{
+    width: 30px;
+    height: 30px;
+    background: url("../images/school_search.png") no-repeat;
+}
+
+button.btn:active{
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+button.btn:focus{
+    border: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+#background{
+    margin-top: -1%;
+    max-width: 1920px;
+    position: relative;
+    background: url("../images/school_04.jpg") no-repeat center top ;
+    height: 600px;
+    z-index: 100;
+}
+.mask{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(0,0,0,.3);
+    z-index:10;
+}
+
+/*模态框的内容*/
+div.spinner{
+    position: relative;
+    float: left;
+    color: #3ad8ff;
+    width: 300px;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 1rem;
+    padding: 5px 10px;
+}
+#schoolInput{
+
+    max-width: 100%;
+    border: none;
+    -webkit-appearance: none;
+    color: #3ad8ff;
+}
+#curriculumInput{
+    max-width: 100%;
+    border: none;
+    -webkit-appearance: none;
+    color: #3ad8ff;
+}
+div.spinner>ul{
+    width: 80%;
+    list-style: none;
+    border: 1px solid #3ad8ff;
+    border-radius: 5px;
+    padding:3% 0px;
+    position: absolute;
+    right: 0;
+    top:100%;
+    font-size: 1em;
+    line-height: 1em;
+    background-color: #ffffff;
+    display: none;
+    z-index:100000;
+}
+div.spinner>ul.triangle{
+    position: absolute;
+    right: 0%;
+    top: 0%;
+}
+
+div.spinner>i{
+    position: absolute;
+    right: 10px ;
+    top: 10px;
+
+}
+div.spinner li{
+    margin: 5px 0;
+    padding: 5px;
+
+}
+li.active{
+    background-color: #3ad8ff;
+    color: #ffffff;
+}
+.triangle{
+    width: 0;
+    height: 0;
+    border-width: .5em .5em 0 .5em;
+    border-color:#3ad8ff transparent;
+    border-style: solid;
+}
+button.school-search i.triangle{
+    border-color:#fff transparent;
+
+}
+button.school-search i{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+}
+button.curriculum-search i.triangle{
+    border-color:#fff transparent;
+
+}
+button.curriculum-search i{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+}
+.school-search{
+    background-color: #3ad8ff;
+    border: none;
+    width: 180px;
+    position: relative;
+    padding: 5px;
+    font-size: 1rem;
+    color: #fff;
+}
+.curriculum-search{
+    background-color: #3ad8ff;
+    border: none;
+    width: 180px;
+    position: relative;
+    padding: 5px;
+    font-size: 1rem;
+    color: #fff;
+    display: none;
+}
+.school-search:hover{
+    background-color: #3ad8ff;
+    color: #fff;
+}
+.school-search:link{
+    background-color: #3ad8ff;
+    color: #fff;
+
+}
+.curriculum-search:hover{
+    background-color: #3ad8ff;
+    color: #fff;
+}
+.curriculum-search:link{
+    background-color: #3ad8ff;
+    color: #fff;
+
+}
+
+/*中间*/
+#main{
+    background-color: #fafafa;
+    padding-top: 10%;
+    margin-top: -2%;
+    padding-bottom: 5%;
+    position: relative;
+}
+#discuss div.mt{
+    /*高度，背景，边框*/
+    height:32px;
+    background:#F7F7F7;
+    border:1px solid #ddd;
+    border-radius: 4px;
+    -moz-box-shadow: 0 0 2px #ccc
+    -webkit-box-shadow: 0 0 2px #ccc;
+    box-shadow: 0 0 5px #aaa;
+}
+#discuss div.mt a {
+    /*左浮动，宽度，高度，水平排列，行高*/
+    float: left;
+    width: 16.6667%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-right: 1px solid #ddd;
+    color:#000;
+}
+#discuss div.mt a.current:last-child{
+    border-right:none ;
+}
+#discuss div.mt a:last-child{
+    border: none;
+}
+#discuss div.mt a:hover{
+    /*颜色，取消下划线*/
+    color:#3ad8ff;
+    text-decoration:none;
+}
+#discuss div.mt a.current{
+    /*左右边框，上边框，背景颜色，文本颜色 */
+    border:1px solid #ddd;
+    border: none;
+    /*border-bottom:none;*/
+    /*border-top: none;*/
+    border-bottom:2px solid #3ad8ff;
+    border-right: 1px solid #ddd;
+    background-color:#fff;
+    color:#3ad8ff;
+    /*border-left: none;*/
+    /*向上移动元素*/
+    margin-top:0px;
+    /*增加高度*/
+    height:31px;
+    line-height:31px;
+    position: relative;
+}
+a.current::after{
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: .5em .5em 0 .5em;
+    border-color:#3ad8ff transparent;
+    border-style: solid;
+    position: absolute;
+    left: 45%;
+    bottom: -7px;
+}
+div.school-introduce{
+    display: none;
+}
+div.school-introduce .current{
+    display: block;
+}
+
+.padding{
+    padding-left:2%;
+}
+.school-div{
+    padding: 10px 10px;
+    margin-right: 20px;
+    margin-left: 0px;
+    margin-top: -20px;
+    background-color: #fff;
+}
+.top-border{
+    border-top: 1px solid #ddd;
+    color:#c5c5c5;
+    margin: 7% 12% 0 3%;
+}
+.top-border>li{
+    margin-top:2%;
+    margin-bottom: 2%;
+}
+.top-border span{
+    border-right:1px solid #ddd ;
+    margin-left:20%;
+
+}
+
+/*尾部*/
+#footer{
+    height:150px;
+    background-color: #000000;
+    line-height:2rem;
+    color:#39b5d5;
+}
+#footer div{
+    margin-top:2% ;
+}
+#footer a{
+    color:#39b5d5;
+}
+#footer p{
+    color: #ffffff;
+}

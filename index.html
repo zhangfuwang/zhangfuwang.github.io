@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <title>首页</title>
+
+
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/school.css"/>
+    <!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        ::-webkit-input-placeholder { /* WebKit browsers */
+        color: #3ad8ff;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color:#3ad8ff;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #3ad8ff;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: #3ad8ff;
+        }
+        @media screen  and (max-width: 1200px)  {
+               div.spinner{
+                   width: 240px;
+               }
+            .school-div {
+
+                margin-right: 0px;
+
+            }
+        }
+        @media screen and (max-width: 990px){
+            .school-div {
+                margin-right: 5px;
+            }
+            .last-conceal{
+                display: none;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .school-div {
+
+                margin-right: 0px;
+                margin-top: -15px;
+
+            }
+            .school-details{
+                max-width: 340px;
+            }
+            #login {
+                margin: 0;
+            }
+            #schoolCollapse .dropdown{
+                position: static;
+            }
+            div.spinner{
+                width: 100px;
+            }
+            .school-search{
+                width: 80px;
+                padding-left: 0;
+
+            }
+            .curriculum-search{
+                width: 80px;
+                padding-left: 0;
+
+            }
+            button.school-search i{
+                position: absolute;
+                right: 5px;
+                top: 10px;
+
+            }
+            button.curriculum-search i{
+                position: absolute;
+                right: 5px;
+                top: 10px;
+
+            }
+            #background{
+                height: 210px;
+            }
+            #main{
+                font-size: .6rem;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<nav id="nav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="index.html" class="navbar-brand">
+                <img src="images/school_02.jpg" class="img-responsive" alt=""/>
+            </a>
+            <button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target="#schoolCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="schoolCollapse" class="navbar-collapse collapse">
+            <!-- 列表-->
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <a href="index.html" class="text-blue">首页</a>
+                </li>
+                <li>
+                    <a href="schoolComment.html">评论</a>
+                </li>
+            </ul>
+            <!-- 登录-->
+            <div class="nav navbar-nav navbar-right " id="login">
+                <a href="login.html" >
+                    <img src="images/school_user.png" alt=""/>
+                </a>
+            </div>
+
+            <!-- form表单-->
+            <form class="navbar-form navbar-right">
+                <p class="form-control-static text-gray">|</p>
+                <div class="form-group has-feedback">
+                    <input id="search" class="form-control" type="text" placeholder="请输入你要查找的内容"/>
+                    <button class="btn" id="search-icon" ></button>
+                </div>
+
+            </form>
+            <div class="dropdown navbar-right">
+                <a href="#" class="dropdown-toggle navbar-text" data-toggle="dropdown">
+                    学校
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="schoolEvaluation.html">哈佛大学</a></li>
+                    <li><a href="schoolEvaluation.html">耶鲁大学</a></li>
+                    <li><a href="schoolEvaluation.html">牛津大学</a></li>
+                    <li><a href="schoolEvaluation.html">剑桥大学</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row img-responsive" id="background">
+
+        <div class="mask ">
+            <div class="container vertical-align">
+                <div class="row ">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-md-offset-1">
+                        <div class="spinner">
+                            <input id="schoolInput" value="" type="text" placeholder="学校"/>
+                            <i class="triangle"></i>
+                            <ul class="new">
+                                <li class="active"><a href="#">哈佛大学</a></li>
+                                <li><a href="#">加利福尼亚大学</a></li>
+                                <li><a href="#">耶鲁大学</a></li>
+                                <li><a href="#">剑桥大学</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="col-xs-4 col-sm-4 ">
+                        <div class="spinner">
+                            <input id="curriculumInput" value="" type="text" placeholder="课程"/>
+                            <i class="triangle"></i>
+                            <ul>
+                                <li class="active"><a href="#">哈佛大学</a></li>
+                                <li><a href="#">加利福尼亚大学</a></li>
+                                <li><a href="#">耶鲁大学</a></li>
+                                <li><a href="#">剑桥大学</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class=" col-xs-2 col-sm-2">
+
+                        <button class="btn  school-search"><span>搜索学校</span> <i class="triangle"></i></button>
+                        <button class="btn  curriculum-search"><span>搜索课程</span> <i class="triangle"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" id="main">
+
+    <div class="container " id="discuss">
+        <div class="row mt" >
+
+            <a href="javascript:;" >加拿大 </a>
+            <a href="javascript:;" class="current">美国</a>
+            <a href="javascript:;" >澳大利亚 </a>
+            <a href="javascript:;">英国 </a>
+            <a href="javascript:;">新西兰 </a>
+            <a href="javascript:;">其他 </a>
+
+
+        </div>
+
+        <div class="row school-introduce"  >
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_07.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12  ">加拿大·加利福尼亚大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_09.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">加拿大·普林斯顿大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_11.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">加拿大·斯坦福大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">加拿大·哥伦比亚大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">加拿大·哈佛大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">加拿大·耶鲁大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">加拿大·哥伦比亚大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">加拿大·哈佛大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="last-conceal col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">加拿大·耶鲁大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-12">
+                <button class="btn btn-default col-xs-12 more" > 查看<span>加拿大</span>全部学校</button>
+            </div>
+        </div>
+        <div class="row school-introduce" style="display: block" >
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_07.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12  ">美国·加利福尼亚大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_09.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">美国·普林斯顿大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_11.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">美国·斯坦福大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">美国·哥伦比亚大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">美国·哈佛大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">美国·耶鲁大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">美国·哥伦比亚大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">美国·哈佛大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="last-conceal col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">美国·耶鲁大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-12">
+                <button class="btn btn-default col-xs-12 more" > 查看<span>美国</span>全部学校</button>
+            </div>
+        </div>
+        <div class="row school-introduce"  >
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_07.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12  ">澳大利亚·加利福尼亚大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_09.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">澳大利亚·普林斯顿大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_11.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">澳大利亚·斯坦福大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">澳大利亚·哥伦比亚大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">澳大利亚·哈佛大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">澳大利亚·耶鲁大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">澳大利亚·哥伦比亚大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">澳大利亚·哈佛大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="last-conceal col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">澳大利亚·耶鲁大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-12">
+                <button class="btn btn-default col-xs-12 more" > 查看<span>澳大利亚</span>全部学校</button>
+            </div>
+        </div>
+        <div class="row school-introduce"  >
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_07.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12  ">英国·加利福尼亚大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_09.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">英国·普林斯顿大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_11.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">英国·斯坦福大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">英国·哥伦比亚大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">英国·哈佛大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">英国·耶鲁大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">英国·哥伦比亚大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">英国·哈佛大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="last-conceal col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">英国·耶鲁大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-12">
+                <button class="btn btn-default col-xs-12 more" > 查看<span>英国</span>全部学校</button>
+            </div>
+        </div>
+        <div class="row school-introduce"  >
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_07.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12  ">新西兰·加利福尼亚大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_09.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">新西兰·普林斯顿大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_11.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">新西兰·斯坦福大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">新西兰·哥伦比亚大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">新西兰·哈佛大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">新西兰·耶鲁大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">新西兰·哥伦比亚大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">新西兰·哈佛大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="last-conceal col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">新西兰·耶鲁大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-12">
+                <button class="btn btn-default col-xs-12 more" > 查看<span>新西兰</span>全部学校</button>
+            </div>
+        </div>
+        <div class="row school-introduce"  >
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_07.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12  ">其他·加利福尼亚大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_09.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">其他·普林斯顿大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_11.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">其他·斯坦福大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">其他·哥伦比亚大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">其他·哈佛大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">其他·耶鲁大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">其他·哥伦比亚大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">其他·哈佛大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="last-conceal col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
+                <div class="school-details">
+                    <a href="schoolEvaluation.html" class="row">
+                        <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
+                    </a>
+                    <div class="row school-div">
+                        <h5 class=" col-xs-12 ">其他·耶鲁大学</h5>
+                        <ul class=" list-inline top-border  ">
+                            <li class="col-xs-4">饮食：4<span></span> </li>
+                            <li class="col-xs-4">娱乐：4<span> </span> </li>
+                            <li class="col-xs-4">安全：5</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-12">
+                <button class="btn btn-default col-xs-12 more" > 查看<span>其他</span>全部学校</button>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+</div>
+
+<footer id="footer" class="container-fluid text-center bg-info vertical-align:center">
+    <div>
+        <a href="#">联系我们</a>|<a href="#">营业执照</a>|<a href="#">使用条款</a>|<a href="#">隐私政策</a>
+    </div>
+        <p>2008-2016 版权所有</p>
+        <p>京ICP证080678号 京ICP备09040564号 京公网安备11010502027214号</p>
+</footer>
+
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootlint.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

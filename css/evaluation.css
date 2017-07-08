@@ -1,0 +1,46 @@
+#schoolReview{
+    padding:2% 3%;
+}
+.bg-fluid{
+    background-color: #efefef;
+}
+#schoolSort{
+    margin: 2% 0;
+}
+#schoolSort tr{
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+#schoolSort td{
+    padding: 20px 0;
+}
+textarea {
+    resize : none;
+}
+#evaluationImg{
+    background: url("../images/school_04.jpg") no-repeat center top;
+    height: 420px;
+    position: relative;
+}
+.mask{
+
+    height: 210px;
+    background-color: #efefef;
+    z-index:10;
+    font-size: 6rem;
+    line-height: 210px;
+}
+#schoolSort td[class*="col-"]{
+    float: left;
+}
+#schoolSort td[class*="col-xs-"]{
+    padding-right: 40px;
+    padding-left: 50px;
+}
+#Tcomment{
+    min-height: 100%;
+    width:100% ;
+    border-radius: 5px;
+    margin-bottom: 1%;
+}
+

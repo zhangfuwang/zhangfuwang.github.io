@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>学校评价</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/school.css"/>
+    <link rel="stylesheet" href="css/evaluation.css"/>
+    <style>
+        @media screen  and (max-width: 768px) {
+            .mask{
+                font-size: 4rem;
+            }
+            #login {
+                position: relative;
+                top: 25px;
+                left: 0px;
+                transform: translateY(-50%);
+                margin: 0;
+            }
+            .score{
+                width: 180px;
+                float: right;
+            }
+            /*#schoolSort td.col-xs-4{*/
+                /*float: right;*/
+            /*}*/
+            #schoolSort td.col-xs-12{
+                float: right;
+            }
+            #schoolSort td[class*="col-xs-"]{
+                padding-right: 10px;
+                padding-left: 20px;
+            }
+            #schoolSort td {
+                 padding:0;
+            }
+            #footer{
+                background-color: #eee;
+            }
+            #footer p{
+                color: #a8a8a8 ;
+            }
+        }
+        @media screen and (max-width: 990px) {
+
+        }
+        @media screen and (max-width: 1200px) {
+            #schoolSort{
+                margin: 2% 0;
+            }
+            #schoolSort td[class*="col-xs-"]{
+                padding-right: 40px;
+                padding-left: 50px;
+            }
+            #Tcomment{
+                min-height: 100%;
+                width:100% ;
+                margin-bottom: 1%;
+            }
+            #footer{
+                background-color: #eee;
+            }
+            #footer p {
+                color: #000;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav id="nav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand">
+                <img src="images/school_02.jpg" class="img-responsive" alt=""/>
+            </a>
+            <button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target="#schoolCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="schoolCollapse" class="navbar-collapse collapse">
+            <!-- 列表-->
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li>
+                    <a href="schoolEvaluation.html">评论</a>
+                </li>
+            </ul>
+            <!-- 登录-->
+            <div class="nav navbar-nav navbar-right " id="login">
+                <a href="#" >
+                    <img src="images/school_user.png" alt=""/>
+                </a>
+            </div>
+
+            <!-- form表单-->
+            <form class="navbar-form navbar-right">
+                <p class="form-control-static text-gray">|</p>
+                <div class="form-group has-feedback">
+                    <input id="search" class="form-control" type="text" placeholder="请输入你要查找的内容"/>
+                    <button class="btn" id="search-icon" ></button>
+                </div>
+
+            </form>
+            <div class="dropdown navbar-right">
+                <a href="#" class="dropdown-toggle navbar-text" data-toggle="dropdown">
+                    学校
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="schoolEvaluation.html">哈佛大学</a></li>
+                    <li><a href="schoolEvaluation.html">耶鲁大学</a></li>
+                    <li><a href="schoolEvaluation.html">牛津大学</a></li>
+                    <li><a href="schoolEvaluation.html">剑桥大学</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid bg-fluid">
+    <div class="row" id="evaluationImg">
+        <div class="text-center col-xs-12  text-blue mask" >学校评价</div>
+    </div>
+    <div class="container">
+    <div class="row " id="schoolReview">
+
+        <table class="col-xs-12" id="schoolSort">
+            <tbody>
+                <tr class="row margin-top-bottom">
+                    <td class="col-xs-1">1</td>
+                    <td class="col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-0  col-md-3 col-md-offset-0  col-lg-3 col-lg-offset-1">REPUTATION</td>
+                    <td class=" col-xs-12    col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-3 ">
+                        <select name="" class="score">
+                            <option value="-1">学校评分</option>
+                            <option value="0"><a href="#">1</a></option>
+                            <option value="1"><a href="#">2</a></option>
+                            <option value="2"><a href="#">3</a></option>
+                            <option value="3"><a href="#">4</a></option>
+                            <option value="4"><a href="#">5</a></option>
+                            <option value="5"><a href="#">6</a></option>
+                            <option value="6"><a href="#">7</a></option>
+                            <option value="7"><a href="#">8</a></option>
+                            <option value="8"><a href="#">9</a></option>
+                            <option value="9"><a href="#">10</a></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="row margin-top-bottom">
+                    <td class="col-xs-1">2</td>
+                    <td class="col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-0  col-md-3 col-md-offset-0  col-lg-3 col-lg-offset-1">LOCATION</td>
+                    <td class=" col-xs-4 col-xs-offset-8   col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-3">
+                        <select name="" class="score">
+                            <option value="-1">学校评分</option>
+                            <option value="0"><a href="#">1</a></option>
+                            <option value="1"><a href="#">2</a></option>
+                            <option value="2"><a href="#">3</a></option>
+                            <option value="3"><a href="#">4</a></option>
+                            <option value="4"><a href="#">5</a></option>
+                            <option value="5"><a href="#">6</a></option>
+                            <option value="6"><a href="#">7</a></option>
+                            <option value="7"><a href="#">8</a></option>
+                            <option value="8"><a href="#">9</a></option>
+                            <option value="9"><a href="#">10</a></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="row margin-top-bottom">
+                    <td class="col-xs-1">3</td>
+                    <td class="col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-0  col-md-3 col-md-offset-0  col-lg-3 col-lg-offset-1">OPPORTUNITIES</td>
+                    <td class=" col-xs-4 col-xs-offset-8   col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-3">
+                        <select name="" class="score">
+                            <option value="-1">学校评分</option>
+                            <option value="0">1</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                            <option value="3">4</option>
+                            <option value="4">5</option>
+                            <option value="5">6</option>
+                            <option value="6">7</option>
+                            <option value="7">8</option>
+                            <option value="8">9</option>
+                            <option value="9">10</option>
+                        </select>
+                </tr>
+                <tr class="row margin-top-bottom">
+                    <td class="col-xs-1">4</td>
+                    <td class="col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-0  col-md-3 col-md-offset-0  col-lg-3 col-lg-offset-1">FACILITIES</td>
+                    <td class=" col-xs-4 col-xs-offset-8   col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-3">
+                        <select name="" class="score">
+                            <option value="-1">学校评分</option>
+                            <option value="0">1</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                            <option value="3">4</option>
+                            <option value="4">5</option>
+                            <option value="5">6</option>
+                            <option value="6">7</option>
+                            <option value="7">8</option>
+                            <option value="8">9</option>
+                            <option value="9">10</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="row margin-top-bottom">
+                    <td class="col-xs-1">5</td>
+                    <td class="col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-0  col-md-3 col-md-offset-0  col-lg-3 col-lg-offset-1">INTERNET</td>
+                    <td class=" col-xs-4 col-xs-offset-8   col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-3">
+                        <select name="" class="score">
+                            <option value="-1">学校评分</option>
+                            <option value="0">1</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                            <option value="3">4</option>
+                            <option value="4">5</option>
+                            <option value="5">6</option>
+                            <option value="6">7</option>
+                            <option value="7">8</option>
+                            <option value="8">9</option>
+                            <option value="9">10</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="row margin-top-bottom">
+                    <td class="col-xs-1">6</td>
+                    <td class="col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-0  col-md-3 col-md-offset-0  col-lg-3 col-lg-offset-1">FOOD</td>
+                    <td class=" col-xs-4 col-xs-offset-8   col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-3">
+                        <select name="" class="score">
+                            <option value="-1">学校评分</option>
+                            <option value="0">1</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                            <option value="3">4</option>
+                            <option value="4">5</option>
+                            <option value="5">6</option>
+                            <option value="6">7</option>
+                            <option value="7">8</option>
+                            <option value="8">9</option>
+                            <option value="9">10</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="row margin-top-bottom">
+                    <td class="col-xs-1">7</td>
+                    <td class="col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-0  col-md-3 col-md-offset-0  col-lg-3 col-lg-offset-1">CLUBS</td>
+                    <td class=" col-xs-4 col-xs-offset-8   col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-3">
+                        <select name="" class="score">
+                            <option value="-1">学校评分</option>
+                            <option value="0">1</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                            <option value="3">4</option>
+                            <option value="4">5</option>
+                            <option value="5">6</option>
+                            <option value="6">7</option>
+                            <option value="7">8</option>
+                            <option value="8">9</option>
+                            <option value="9">10</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="row margin-top-bottom">
+                    <td class="col-xs-1">8</td>
+                    <td class="col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-0  col-md-3 col-md-offset-0  col-lg-3 col-lg-offset-1">SOCIAL</td>
+                    <td class=" col-xs-4 col-xs-offset-8   col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-3">
+                        <select name="" class="score">
+                            <option value="-1">学校评分</option>
+                            <option value="0">1</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                            <option value="3">4</option>
+                            <option value="4">5</option>
+                            <option value="5">6</option>
+                            <option value="6">7</option>
+                            <option value="7">8</option>
+                            <option value="8">9</option>
+                            <option value="9">10</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="row margin-top-bottom">
+                    <td class="col-xs-1">9</td>
+                    <td class="col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-0  col-md-3 col-md-offset-0  col-lg-3 col-lg-offset-1">HAPPINESS</td>
+                    <td class=" col-xs-4 col-xs-offset-8   col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-3">
+                        <select name="" class="score">
+                            <option value="-1">学校评分</option>
+                            <option value="0">1</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                            <option value="3">4</option>
+                            <option value="4">5</option>
+                            <option value="5">6</option>
+                            <option value="6">7</option>
+                            <option value="7">8</option>
+                            <option value="8">9</option>
+                            <option value="9">10</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="row margin-top-bottom">
+                    <td class="col-xs-1">10</td>
+                    <td class="col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-0  col-md-3 col-md-offset-0  col-lg-3 col-lg-offset-1">SAFETY</td>
+                    <td class=" col-xs-4 col-xs-offset-8   col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-3">
+                        <select name="" class="score">
+                            <option value="-1">学校评分</option>
+                            <option value="0">1</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                            <option value="3">4</option>
+                            <option value="4">5</option>
+                            <option value="5">6</option>
+                            <option value="6">7</option>
+                            <option value="7">8</option>
+                            <option value="8">9</option>
+                            <option value="9">10</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="row margin-top-bottom">
+                    <td class="col-xs-1">11</td>
+                    <td class="col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-0  col-md-3 col-md-offset-0  col-lg-3 col-lg-offset-1">GRADUATION YEAR</td>
+                    <td class="col-xs-4 col-xs-offset-8    col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-3">
+                        <select name="" class="score">
+                            <option value="-1">学校评分</option>
+                            <option value="0">1</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                            <option value="3">4</option>
+                            <option value="4">5</option>
+                            <option value="5">6</option>
+                            <option value="6">7</option>
+                            <option value="7">8</option>
+                            <option value="8">9</option>
+                            <option value="9">10</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="row">
+                    <td class="col-xs-1 ">12</td>
+                    <td class="col-xs-3 col-xs-offset-1 col-sm-offset-0 col-md-offset-0   col-lg-offset-1 ">COMMENTS</td>
+                    <td class="col-xs-12   text-center">
+                        <textarea name="comment" id="Tcomment" cols="30" rows="10"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="row">
+            <button class="btn bg-blue col-xs-3 col-xs-offset-5">SUBMIT</button>
+        </div>
+    </div>
+    </div>
+</div>
+
+<footer id="footer" class="container-fluid text-center bg-info vertical-align:center">
+    <div>
+        <a href="#">联系我们</a>|<a href="#">营业执照</a>|<a href="#">使用条款</a>|<a href="#">隐私政策</a>
+    </div>
+    <p>2008-2016 版权所有</p>
+    <p>京ICP证080678号 京ICP备09040564号 京公网安备11010502027214号</p>
+</footer>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootlint.js"></script>
+<script src="js/evaluation.js"></script>
+</body>
+</html>
