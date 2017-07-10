@@ -16,6 +16,19 @@ button.index-search{
 #commentContent {
     margin: 50px auto;
 }
+div.text-gray{
+    display: flex;
+}
+.star{
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+.star img{
+    width:20px;
+    height: 20px;
+}
 .margin-left{
     margin-left: 2%;
 }
@@ -68,10 +81,10 @@ button.index-search{
         width:10%;
     }
     .message-center{
-        width: 25%;
+        width: 15%;
     }
     .message-right{
-        width: 60%;
+        width: 68%;
     }
     .absolute-condition{
         left: 37%;
@@ -92,14 +105,37 @@ button.index-search{
         transform: translateY(-50%);
         margin: 0;
     }
+    img{
+        float: left;
+        width: 100%;
+    }
+    .star{
+        float: left;
+
+
+
+    }
+    .star img{
+        float: left;
+        width: 100%;
+    }
+    .message-left{
+        width:10%;
+    }
+    .message-center{
+        width: 15%;
+    }
+    .message-right{
+        width: 68%;
+    }
     #share{
         width: 30%;
     }
     .absolute-condition{
-        left: 43%;
+        left: 38%;
     }
     .absolute-graded{
-        left: 43%;
+        left: 38%;
     }
     div.spinner{
         max-width: 100%;

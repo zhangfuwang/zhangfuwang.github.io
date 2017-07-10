@@ -362,7 +362,7 @@ div.school-introduce .current{
 }
 .school-div{
     padding: 10px 10px;
-    margin-right: 20px;
+    margin-right: 10px;
     margin-left: 0px;
     margin-top: -20px;
     background-color: #fff;
@@ -381,7 +381,9 @@ div.school-introduce .current{
     margin-left:20%;
 
 }
-
+.more{
+    margin-top: 20px;
+}
 /*尾部*/
 #footer{
     height:150px;
@@ -406,9 +408,7 @@ div.school-introduce .current{
     }
 }
 @media screen and (max-width: 990px){
-    .school-div {
-        margin-right: 5px;
-    }
+
     .last-conceal{
         display: none;
     }
