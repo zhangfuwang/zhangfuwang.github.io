@@ -7,64 +7,6 @@
     <link rel="stylesheet" href="css/school.css"/>
     <link rel="stylesheet" href="css/evaluation.css"/>
     <style>
-        @media screen  and (max-width: 768px) {
-            .mask{
-                font-size: 4rem;
-            }
-            #login {
-                position: relative;
-                top: 25px;
-                left: 0px;
-                transform: translateY(-50%);
-                margin: 0;
-            }
-            .score{
-                width: 180px;
-                float: right;
-            }
-            /*#schoolSort td.col-xs-4{*/
-                /*float: right;*/
-            /*}*/
-            #schoolSort td.col-xs-12{
-                float: right;
-            }
-            #schoolSort td[class*="col-xs-"]{
-                padding-right: 10px;
-                padding-left: 20px;
-            }
-            #schoolSort td {
-                 padding:0;
-            }
-            #footer{
-                background-color: #eee;
-            }
-            #footer p{
-                color: #a8a8a8 ;
-            }
-        }
-        @media screen and (max-width: 990px) {
-
-        }
-        @media screen and (max-width: 1200px) {
-            #schoolSort{
-                margin: 2% 0;
-            }
-            #schoolSort td[class*="col-xs-"]{
-                padding-right: 40px;
-                padding-left: 50px;
-            }
-            #Tcomment{
-                min-height: 100%;
-                width:100% ;
-                margin-bottom: 1%;
-            }
-            #footer{
-                background-color: #eee;
-            }
-            #footer p {
-                color: #000;
-            }
-        }
     </style>
 </head>
 <body>
@@ -124,7 +66,7 @@
 </nav>
 
 <div class="container-fluid bg-fluid">
-    <div class="row" id="evaluationImg">
+    <div class="row" id="background">
         <div class="text-center col-xs-12  text-blue mask" >学校评价</div>
     </div>
     <div class="container">
@@ -349,20 +291,25 @@
                 </tr>
             </tbody>
         </table>
-
-        <div class="row" id="btn">
-            <button class="btn bg-blue col-xs-3 col-xs-offset-5">SUBMIT</button>
+        <div class="col-xs-12">
+            <div class="row" id="btn">
+                <button class="btn bg-blue col-xs-3 col-xs-offset-5">SUBMIT</button>
+            </div>
         </div>
+
     </div>
     </div>
 </div>
 
-<footer id="footer" class="container-fluid text-center bg-info vertical-align:center">
-    <div>
-        <a href="#">联系我们</a>|<a href="#">营业执照</a>|<a href="#">使用条款</a>|<a href="#">隐私政策</a>
+<footer id="footer" class="container-fluid text-center bg-info  ">
+    <div class="vertical-center">
+        <div>
+            <a href="#">联系我们</a>|<a href="#">营业执照</a>|<a href="#">使用条款</a>|<a href="#">隐私政策</a>
+        </div>
+        <p>2008-2016 版权所有</p>
+        <p>京ICP证080678号 京ICP备09040564号 京公网安备11010502027214号</p>
     </div>
-    <p>2008-2016 版权所有</p>
-    <p>京ICP证080678号 京ICP备09040564号 京公网安备11010502027214号</p>
+
 </footer>
 <script src="js/jquery-1.11.3.js"></script>
 <script src="js/bootstrap.js"></script>

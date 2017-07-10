@@ -51,19 +51,19 @@ $(function(){
 
          })
     });
-    $(" .school-search i").click(function(){
+    $(" #schoolSearch i").click(function(){
         $(this).parent().hide().next().show();
     });
-    $(" .school-search span ").click(function(e){
+    $(" #schoolSearch span ").click(function(e){
         //console.log("hello");
         e.preventDefault();
         location.href="schoolEvaluation.html";
     });
-    $(" .curriculum-search span ").click(function(e){
+    $(" #curriculumSearch span ").click(function(e){
         e.preventDefault();
         location.href="curriculumEvaluation.html";
     });
-    $(" .curriculum-search i").click(function(){
+    $(" #curriculumSearch i").click(function(){
         $(this).parent().hide().prev().show();
     });
 

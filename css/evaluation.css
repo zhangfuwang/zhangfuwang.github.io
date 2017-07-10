@@ -1,8 +1,14 @@
+textarea {
+    resize : none;
+}
+.mask{
+    background-color: #efefef;
+    z-index:10;
+    font-size: 6rem;
+
+}
 #schoolReview{
     padding:2% 3%;
-}
-.bg-fluid{
-    background-color: #efefef;
 }
 #schoolSort{
     margin: 2% 0;
@@ -14,22 +20,7 @@
 #schoolSort td{
     padding: 20px 0;
 }
-textarea {
-    resize : none;
-}
-#evaluationImg{
-    background: url("../images/school_04.jpg") no-repeat center top;
-    height: 420px;
-    position: relative;
-}
-.mask{
 
-    height: 210px;
-    background-color: #efefef;
-    z-index:10;
-    font-size: 6rem;
-    line-height: 210px;
-}
 #schoolSort td[class*="col-"]{
     float: left;
 }
@@ -43,4 +34,29 @@ textarea {
     border-radius: 5px;
     margin-bottom: 1%;
 }
+@media screen  and (max-width: 768px) {
+    .mask{
+        font-size: 4rem;
+    }
+    #login {
+        margin: 0;
+    }
+    .score{
+        width: 180px;
+        float: right;
+    }
+    /*#schoolSort td.col-xs-4{*/
+    /*float: right;*/
+    /*}*/
+    #schoolSort td.col-xs-12{
+        float: right;
+    }
+    #schoolSort td[class*="col-xs-"]{
+        padding-right: 10px;
+        padding-left: 20px;
+    }
+    #schoolSort td {
+        padding:0;
+    }
 
+}

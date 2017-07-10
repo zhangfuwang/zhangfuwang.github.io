@@ -1,55 +1,8 @@
-html {
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    font-size: 12px;
-}
-ul, li, div, p, body, h1, h2, h3, h4, h5, h6, dl, dt, dd {
-    margin: 0;
-    padding: 0;
-}
-li {
-    list-style: none;
-}
-a {
-    text-decoration: none;
-
-}
-input {
-    -webkit-appearance: none;
-    outline: none
-}
-h1, h2, h3, h4, h5,b,i,small{
-    font-style: normal;
-    font-weight: normal;
-}
 h4{
     margin: 4% 0;
 }
-* {
-    outline: none;
-    webkit-focus-ring-color: rgba(0, 0, 0, 0);
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-}
-.hide {
-    display: none;
-}
-
-
-*{
-    box-sizing: border-box;
-}
-
-
-
-
-
-#form1 button.btn-blue{
-    color:#ffffff;
-    background-color: #3ad8ff;
-    margin-top: 6%;
-    margin-bottom: 3%;
-
+#nav{
+    background-color: #fafafa;
 }
 .welcome{
     /*margin-top: 15px;*/
@@ -57,9 +10,6 @@ h4{
     /*margin-left: auto;*/
     /*margin-right: auto;*/
     margin: 15px;
-}
-#nav{
-    background-color: #fafafa;
 }
 #nav h3{
     margin: 7px 0;
@@ -70,32 +20,28 @@ h4{
 #nav ul{
     margin: 20px ;
 }
-
 #main {
     background-color: #fff;
     margin-top: 50px;
-    /* margin-top: -2%; */
-    padding-bottom: 5%;
-    position: relative;
 }
-
-
-#Account-login img{
-    margin-top:10% ;
+#form1 button.btn-blue {
+    color: #ffffff;
+    background-color: #3ad8ff;
+    margin-top: 6%;
+    margin-bottom: 3%;
 }
 #form1{
     margin-bottom: 2%;
 }
 #form1 button{
     height: 65px;
-
 }
 #form1:last-child a{
     color: #3ad8ff;
 }
 .input-border {
-    height: 100px;
-    line-height: 100px;
+    height: 80px;
+    line-height: 80px;
     border: none;
     padding-left: 40px;
     border-bottom: 1px solid #dddddd;
@@ -108,14 +54,14 @@ input[type=password]{
 input[type=email]{
     background-image: url("../images/login_email.png");
 }
+#Account-login img{
+    margin-top: 20px ;
+}
 #footer{
-
     height:300px;
-    background-color: #eeeeee;
-    line-height:2rem;
+    background-color: #eee;
     color:#3ad8ff;
     margin-top: 5%;
-
 }
 #footer p:first-child{
     color:#3ad8ff;
@@ -123,8 +69,23 @@ input[type=email]{
 #footer p a{
     color:#3ad8ff;
 }
-
 #footer p{
-
     color: #000;
+}
+
+@media screen  and (max-width: 1200px){
+    #footer{
+        line-height: 2rem;
+    }
+}
+@media screen and (max-width: 990px) {
+
+}
+@media screen  and (max-width: 768px){
+    #main {
+        margin-top: 90px;
+    }
+    #Account-login h4 {
+        font-size: .5rem;
+    }
 }

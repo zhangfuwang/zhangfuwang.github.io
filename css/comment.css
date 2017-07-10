@@ -1,0 +1,140 @@
+.mask{
+    background-color: #efefef;
+}
+div.spinner{
+    width: 240px;
+}
+button.index-search{
+    background:#3ad8ff url("../images/search-button.png") no-repeat 10px 2px;
+}
+.padding-bottom{
+    padding-bottom: 3%;
+}
+#score>div{
+    margin: 10px 0;
+}
+#commentContent {
+    margin: 50px auto;
+}
+.margin-left{
+    margin-left: 2%;
+}
+.message-left{
+    width: 5%;
+}
+.message-center{
+    width: 10%;
+}
+.message-right{
+    width: 80%;
+}
+.relative{
+    position: relative;
+}
+.absolute-condition {
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+}
+.absolute-graded{
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+}
+.absolute-message{
+    position: absolute;
+    left: -.5em;
+    top:7em;
+    z-index: 10;
+}
+#textShare{
+    font-size: 2rem
+}
+#share{
+    background: #6a6a6a url("../images/share.png") no-repeat 1em .5em;
+    width:10% ;
+}
+@media screen and (max-width: 1200px) {
+    #share{
+        width: 15%;
+    }
+}
+@media screen  and (max-width: 990px) {
+    .message-left{
+        width:10%;
+    }
+    .message-center{
+        width: 25%;
+    }
+    .message-right{
+        width: 60%;
+    }
+    .absolute-condition{
+        left: 37%;
+    }
+    .absolute-graded{
+        left: 37%;
+    }
+
+    #share{
+        width: 15%;
+    }
+}
+@media screen and (max-width: 768px) {
+    #login {
+        position: relative;
+        top: 25px;
+        left: 0px;
+        transform: translateY(-50%);
+        margin: 0;
+    }
+    #share{
+        width: 30%;
+    }
+    .absolute-condition{
+        left: 43%;
+    }
+    .absolute-graded{
+        left: 43%;
+    }
+    div.spinner{
+        max-width: 100%;
+    }
+    .index-search{
+        width: 120px;
+    }
+    #textShare{
+        margin: 10px 0;
+    }
+}
+@media screen and (max-width: 700px) {
+    .absolute-condition{
+        left: 50%;
+    }
+    .absolute-graded{
+        left: 50%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .absolute-condition{
+        left: 50%;
+    }
+    .absolute-graded{
+        left: 50%;
+    }
+}
+@media screen and (max-width: 500px) {
+    #score>div.font-size{
+        font-size: 1.5rem;
+    }
+    .absolute-condition{
+        left: 50%;
+    }
+    .absolute-graded{
+        left: 50%;
+    }
+}
