@@ -54,10 +54,10 @@
                     <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">哈佛大学</a></li>
-                    <li><a href="#">耶鲁大学</a></li>
-                    <li><a href="#">牛津大学</a></li>
-                    <li><a href="#">剑桥大学</a></li>
+                    <li><a href="schoolComment.html">哈佛大学</a></li>
+                    <li><a href="schoolComment.html">耶鲁大学</a></li>
+                    <li><a href="schoolComment.html">牛津大学</a></li>
+                    <li><a href="schoolComment.html">剑桥大学</a></li>
                 </ul>
             </div>
         </div>
@@ -69,7 +69,7 @@
                 <div class="row vertical-center">
                     <div class="col-xs-4 col-xs-offset-2 col-lg-3 col-lg-offset-4">
                         <div class="spinner">
-                            <input id="schoolInput" value="" type="text" placeholder="课程名称"/>
+                            <input id="curriculumInput" value="" type="text" placeholder="学校名称"/>
                             <i class="triangle"></i>
                             <ul class="new">
                                 <li class="active"><a href="#">哈佛大学</a></li>
@@ -80,7 +80,7 @@
                         </div>
                     </div>
                     <div class="col-xs-4 col-lg-2 ">
-                        <button class="btn   index-search">搜索课程 </button>
+                        <button class="btn   index-search">搜索学校 </button>
                     </div>
                 </div>
             </div>
@@ -133,7 +133,7 @@
     </section>
     <section class="container"  id="commentContent">
         <div class="row font-size text-blue text-center margin-top-2">
-            课程评论
+            课程展示
         </div>
         <div class="row margin-top-2">
             <div class="left message-left">
@@ -272,7 +272,7 @@
             </div>
         </div>
         <div class="row text-center margin-top-2">
-            <button class="  btn bg-blue">评论课程</button>
+            <button class="  btn bg-blue" id="btnCurriculumComment">评价课程</button>
         </div>
         <div class="row text-center margin-top-2">
             <div class=" text-blue col-xs-12 col-sm-6 col-md-5 col-md-offset-2" id="textShare"><a href="#">你觉得这些评论有用吗？</a> </div>
@@ -292,5 +292,21 @@
 <script src="js/bootstrap.js"></script>
 <script src="js/bootlint.js"></script>
 <script src="js/index.js"></script>
+<script>
+    $(function(){
+        $(" #btnCurriculumComment ").click(function(){
+            location.href="curriculumEvaluation.html";
+        });
+        $(" div.spinner li").click(function(e){
+            e.preventDefault();
+            var liHtml=$(this).children().html();
+            $(" #curriculumInput").val(liHtml);
+        });
+        $(" .index-search ").click(function(){
+            var html=$(" #curriculumInput ").val();
+            location.href="schoolComment.html";
+        });
+    })
+</script>
 </body>
 </html>

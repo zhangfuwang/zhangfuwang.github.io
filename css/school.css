@@ -439,8 +439,14 @@ div.school-introduce .current{
         right: 5px;
         top: 10px;
     }
+    a.current::after {
+
+        left: 42%;
+
+    }
     #main{
         font-size: .6rem;
+        -moz-font-size:1rem;
     }
     #footer{
         background-color: #eee;

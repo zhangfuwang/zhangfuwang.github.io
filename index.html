@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
     <title>首页</title>
-
-
-
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/school.css"/>
     <!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
@@ -72,10 +69,10 @@
                     <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="schoolEvaluation.html">哈佛大学</a></li>
-                    <li><a href="schoolEvaluation.html">耶鲁大学</a></li>
-                    <li><a href="schoolEvaluation.html">牛津大学</a></li>
-                    <li><a href="schoolEvaluation.html">剑桥大学</a></li>
+                    <li><a href="schoolComment.html">哈佛大学</a></li>
+                    <li><a href="schoolComment.html">耶鲁大学</a></li>
+                    <li><a href="schoolComment.html">牛津大学</a></li>
+                    <li><a href="schoolComment.html">剑桥大学</a></li>
                 </ul>
             </div>
         </div>
@@ -87,9 +84,9 @@
         <div class="mask ">
             <div class="container vertical-align">
                 <div class="row ">
-                    <div class="col-xs-4 col-sm-4 col-md-4 col-md-offset-1">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-md-offset-1 search">
                         <div class="spinner">
-                            <input id="schoolInput" value="" type="text" placeholder="学校"/>
+                            <input id="schoolInput" class="input" value="" type="text" placeholder="学校"/>
                             <i class="triangle"></i>
                             <ul class="new">
                                 <li class="active"><a href="#">哈佛大学</a></li>
@@ -99,21 +96,20 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xs-4 col-sm-4 ">
+                    <div class="col-xs-4 col-sm-4 search">
                         <div class="spinner">
-                            <input id="curriculumInput" value="" type="text" placeholder="课程"/>
+                            <input id="curriculumInput" class="input" value="" type="text" placeholder="课程"/>
                             <i class="triangle"></i>
                             <ul>
-                                <li class="active"><a href="#">哈佛大学</a></li>
-                                <li><a href="#">加利福尼亚大学</a></li>
-                                <li><a href="#">耶鲁大学</a></li>
-                                <li><a href="#">剑桥大学</a></li>
+                                <li class="active"><a href="#">法律</a></li>
+                                <li><a href="#">政治</a></li>
+                                <li><a href="#">社会</a></li>
+                                <li><a href="#">人文</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class=" col-xs-2 col-sm-2">
-                        <button class="btn index-search " id="schoolSearch"><span>搜索学校</span> <i class="triangle"></i></button>
-                        <button class="btn index-search " id="curriculumSearch"><span>搜索课程</span> <i class="triangle"></i></button>
+                        <button class="btn index-search " id="indexSearch"><span>搜索</span> </button>
                     </div>
                 </div>
             </div>
@@ -134,7 +130,7 @@
         <div class="row school-introduce "  >
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_07.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -283,7 +279,8 @@
         <div class="row school-introduce" style="display: block" >
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="
+                    schoolComment.html class="row">
                         <img class="img-responsive"  src="images/school_07.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -298,7 +295,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_09.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -313,7 +310,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_11.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -328,7 +325,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -343,7 +340,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -358,7 +355,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -373,7 +370,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -388,7 +385,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -403,7 +400,7 @@
             </div>
             <div class="last-conceal col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -423,7 +420,7 @@
         <div class="row school-introduce"  >
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_07.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -438,7 +435,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_09.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -453,7 +450,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_11.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -468,7 +465,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -483,7 +480,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -498,7 +495,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -513,7 +510,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -528,7 +525,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -543,7 +540,7 @@
             </div>
             <div class="last-conceal col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -563,7 +560,7 @@
         <div class="row school-introduce"  >
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_07.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -578,7 +575,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_09.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -593,7 +590,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_11.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -608,7 +605,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -623,7 +620,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -638,7 +635,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -653,7 +650,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -668,7 +665,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -683,7 +680,7 @@
             </div>
             <div class="last-conceal col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -703,7 +700,7 @@
         <div class="row school-introduce"  >
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_07.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -718,7 +715,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_09.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -733,7 +730,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_11.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -748,7 +745,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -763,7 +760,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -778,7 +775,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -793,7 +790,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -808,7 +805,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -823,7 +820,7 @@
             </div>
             <div class="last-conceal col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -843,7 +840,7 @@
         <div class="row school-introduce"  >
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_07.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -858,7 +855,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_09.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -873,7 +870,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_11.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -888,7 +885,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -903,7 +900,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -918,7 +915,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -933,7 +930,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_16.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -948,7 +945,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_17.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
@@ -963,7 +960,7 @@
             </div>
             <div class="last-conceal col-md-4 col-sm-6 col-xs-12 margin-top-bottom">
                 <div class="school-details">
-                    <a href="schoolEvaluation.html" class="row">
+                    <a href="schoolComment.html" class="row">
                         <img class="img-responsive"  src="images/school_18.jpg" alt=""/>
                     </a>
                     <div class="row school-div">
