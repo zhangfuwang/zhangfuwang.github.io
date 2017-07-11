@@ -16,18 +16,14 @@ button.index-search{
 #commentContent {
     margin: 50px auto;
 }
-div.text-gray{
-    display: flex;
-}
-.star{
-    width: 120px;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 20px;
-}
+
+
 .star img{
     width:20px;
     height: 20px;
+    float: left;
+    margin-right: 5px;
+
 }
 .margin-left{
     margin-left: 2%;
@@ -40,6 +36,13 @@ div.text-gray{
 }
 .message-right{
     width: 80%;
+}
+.message-right h1 {
+
+    margin: 5px 0;
+}
+.message-right>div{
+    margin: 5px 0;
 }
 .relative{
     position: relative;
@@ -110,14 +113,17 @@ div.text-gray{
         width: 100%;
     }
     .star{
-        float: left;
 
-
+        height: 20px;
+    }
+    .list-inline > li {
+         display: block;
 
     }
-    .star img{
-        float: left;
-        width: 100%;
+    .absolute-message {
+
+        left: 0.4em;
+        top: 8em;
     }
     .message-left{
         width:10%;
@@ -128,14 +134,17 @@ div.text-gray{
     .message-right{
         width: 68%;
     }
+    .message-right h1 {
+        font-size: 2rem;
+    }
     #share{
         width: 30%;
     }
     .absolute-condition{
-        left: 38%;
+        left: 50%;
     }
     .absolute-graded{
-        left: 38%;
+        left:50%;
     }
     div.spinner{
         max-width: 100%;
@@ -147,30 +156,15 @@ div.text-gray{
         margin: 10px 0;
     }
 }
-@media screen and (max-width: 700px) {
-    .absolute-condition{
-        left: 50%;
-    }
-    .absolute-graded{
-        left: 50%;
-    }
-}
-@media screen and (max-width: 600px) {
-    .absolute-condition{
-        left: 50%;
-    }
-    .absolute-graded{
-        left: 50%;
-    }
-}
 @media screen and (max-width: 500px) {
     #score>div.font-size{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
-    .absolute-condition{
-        left: 50%;
+   
+    div.message-left{
+        display: none;
     }
-    .absolute-graded{
-        left: 50%;
+    .message-center {
+        width: 25%;
     }
 }
